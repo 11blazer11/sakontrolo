@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ title }}</h2>
+{% for film, rating in films.items %}
+
+    {{ film }} — : {{ rating }}
+    {% if rating > 8 %}
+        <p > კარგი ფილმია </p> 
+    {% else %}
+        <p> სტანდარტული ფილმია </p>
+    {% endif %}  
+
+{% endfor %}
+
+{% endblock %}
